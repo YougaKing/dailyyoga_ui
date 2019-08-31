@@ -1,21 +1,20 @@
 # Dailyyoga UI
 
-###### 每日瑜伽 AndroidUI库，国内/海外事业部通用的Ui View，先暂上传至JitPack 
+每日瑜伽 AndroidUI库，国内/海外事业部通用的Ui View，先暂上传至JitPack 
 
-###### **使用步骤1.** 项目根目录build.gradle
+**使用步骤1.** 项目根目录build.gradle
 
-```css
+```java
 	allprojects {
 		repositories {
-			...
 			maven { url 'https://www.jitpack.io' }
 		}
 	}
 ```
 
-###### 使用步骤2.添加至dependency
+**使用步骤2.**添加至dependency
 
-```css
+```java
 	dependencies {
 	        implementation 'com.github.YougaKing:dailyyoga_ui:1.0.0'
 	}
@@ -23,11 +22,11 @@
 
 ## 一、AttributeView系列
 
-###### AttributeView系列支持shape所有属性，和部分selector以及图片着色和图片角度旋转。如有自定义字体TextView直接继承AttributeTextView即可
+AttributeView系列支持shape所有属性，和部分selector以及图片着色和图片角度旋转。如有自定义字体TextView直接继承AttributeTextView即可
 
-##### shape属性用例以及selector，属性以attr_+属性，请自行查阅
+shape属性用例以及selector，属性以attr_+属性，请自行查阅
 
-```
+```java
     <com.dailyyoga.ui.widget.AttributeTextView
         app:attr_corners_bottomLeftRadius="10dp"       //左下圆角
         app:attr_corners_bottomRightRadius="10dp"      //右下圆角
@@ -39,9 +38,9 @@
         />
 ```
 
-##### 图片着色支持drawablePosition和src
+图片着色支持drawablePosition和src
 
-```
+```java
 //未设置app:attr_drawable_position_tint 既不对图片着色
 <com.dailyyoga.ui.widget.AttributeTextView
         android:drawableLeft="@drawable/icon_menu_info_black"  
@@ -61,9 +60,9 @@
 
 
 
-##### 图片角度反转
+图片角度反转
 
-```
+```java
 //以原图为基准创建rotate.xml
 <rotate 
     android:drawable="@drawable/icon_menu_info_black" //原图
