@@ -22,9 +22,9 @@
 
 ## 一、AttributeView系列
 
-AttributeView系列支持shape所有属性，和部分selector以及图片着色和图片角度旋转。如有自定义字体TextView直接继承AttributeTextView即可
+AttributeView系列支持shape所有属性，和部分selector以及图片着色和图片角度旋转。如有自定义字体TextView直接继承AttributeTextView即可。
 
-shape属性用例以及selector，属性以attr_+属性，请自行查阅
+shape属性用例以及selector，属性以attr_+shape属性，请自行查阅
 
 ```java
     <com.dailyyoga.ui.widget.AttributeTextView
