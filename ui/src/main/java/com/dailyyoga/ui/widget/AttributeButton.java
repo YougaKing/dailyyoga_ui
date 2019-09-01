@@ -50,4 +50,10 @@ public class AttributeButton extends AppCompatButton {
         }
         AttributeCompat.setTint(getCompoundDrawables(), compoundDrawablesColors);
     }
+
+    @Override
+    public void setCompoundDrawables(@Nullable Drawable left, @Nullable Drawable top, @Nullable Drawable right, @Nullable Drawable bottom) {
+        super.setCompoundDrawables(left, top, right, bottom);
+        AttributeCompat.setTint(getCompoundDrawables(), compoundDrawablesColors);
+    }
 }

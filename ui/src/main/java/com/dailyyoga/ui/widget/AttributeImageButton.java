@@ -2,6 +2,8 @@ package com.dailyyoga.ui.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
 
@@ -36,6 +38,12 @@ public class AttributeImageButton extends AppCompatImageButton {
 
     public void setImageDrawableColor(int imageDrawableColor) {
         this.imageDrawableColor = imageDrawableColor;
+        AttributeCompat.setTint(getDrawable(), imageDrawableColor);
+    }
+
+    @Override
+    public void setImageDrawable(@Nullable Drawable drawable) {
+        super.setImageDrawable(drawable);
         AttributeCompat.setTint(getDrawable(), imageDrawableColor);
     }
 }
