@@ -2,13 +2,12 @@ package com.dailyyoga.ui.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.util.AttributeSet;
 
 import com.dailyyoga.ui.AttributeCompat;
 import com.dailyyoga.ui.R;
+import com.dailyyoga.ui.drawable.DrawableSize;
 
 /**
  * @author: YougaKingWu@gmail.com
@@ -17,7 +16,6 @@ import com.dailyyoga.ui.R;
  */
 public class AttributeCheckBox extends AppCompatCheckBox {
 
-    private int[] compoundDrawablesColors;
 
     public AttributeCheckBox(Context context) {
         this(context, null);
@@ -30,30 +28,38 @@ public class AttributeCheckBox extends AppCompatCheckBox {
     public AttributeCheckBox(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.AttributeCheckBox);
-        compoundDrawablesColors = AttributeCompat.setCompoundDrawablesTint(typedArray, this);
+        AttributeCompat.setCompoundDrawablesTint(typedArray, this);
         AttributeCompat.setViewAttribute(typedArray, this);
     }
 
     public void setCompoundDrawablesColors(int left, int top, int right, int bottom) {
-        if (compoundDrawablesColors == null || compoundDrawablesColors.length != 4) return;
         if (left != 0) {
-            compoundDrawablesColors[0] = left;
+            AttributeCompat.setTint(getCompoundDrawables()[0], left);
         }
         if (top != 0) {
-            compoundDrawablesColors[1] = top;
+            AttributeCompat.setTint(getCompoundDrawables()[1], top);
         }
         if (right != 0) {
-            compoundDrawablesColors[2] = right;
+            AttributeCompat.setTint(getCompoundDrawables()[2], right);
         }
         if (bottom != 0) {
-            compoundDrawablesColors[3] = bottom;
+            AttributeCompat.setTint(getCompoundDrawables()[3], bottom);
         }
-        AttributeCompat.setTint(getCompoundDrawables(), compoundDrawablesColors);
     }
 
-    @Override
-    public void setCompoundDrawables(@Nullable Drawable left, @Nullable Drawable top, @Nullable Drawable right, @Nullable Drawable bottom) {
-        super.setCompoundDrawables(left, top, right, bottom);
-        AttributeCompat.setTint(getCompoundDrawables(), compoundDrawablesColors);
+    public void setCompoundDrawablesSizes(DrawableSize left, DrawableSize top, DrawableSize right, DrawableSize bottom) {
+        if (left != null) {
+            left.mergeDrawableSize(getCompoundDrawables()[0]);
+        }
+        if (top != null) {
+            top.mergeDrawableSize(getCompoundDrawables()[1]);
+        }
+        if (right != null) {
+            right.mergeDrawableSize(getCompoundDrawables()[2]);
+        }
+        if (bottom != null) {
+            bottom.mergeDrawableSize(getCompoundDrawables()[3]);
+        }
+        setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], getCompoundDrawables()[2], getCompoundDrawables()[3]);
     }
 }

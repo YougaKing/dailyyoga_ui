@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dailyyoga.ui.drawable.DrawableFactory;
+import com.dailyyoga.ui.drawable.DrawableSize;
 
 /**
  * @author: YougaKingWu@gmail.com
@@ -36,31 +37,62 @@ public class AttributeCompat {
         }
     }
 
-    public static int[] setCompoundDrawablesTint(TypedArray typedArray, View view) {
-        int[] compoundDrawablesColors = new int[4];
+    public static void setCompoundDrawablesTint(TypedArray typedArray, View view) {
+
         Drawable[] compoundDrawables = null;
         if (view instanceof TextView) {
             compoundDrawables = ((TextView) view).getCompoundDrawables();
         }
-        if (compoundDrawables == null) return compoundDrawablesColors;
+        if (compoundDrawables == null) return;
+
+        int[] compoundDrawablesColors = new int[4];
         compoundDrawablesColors[0] = typedArray.getColor(R.styleable.AttributeView_attr_drawable_left_tint, 0);
         compoundDrawablesColors[1] = typedArray.getColor(R.styleable.AttributeView_attr_drawable_top_tint, 0);
         compoundDrawablesColors[2] = typedArray.getColor(R.styleable.AttributeView_attr_drawable_right_tint, 0);
         compoundDrawablesColors[3] = typedArray.getColor(R.styleable.AttributeView_attr_drawable_bottom_tint, 0);
+
+        DrawableSize[] compoundDrawablesSizes = new DrawableSize[4];
+        compoundDrawablesSizes[0] = new DrawableSize();
+        compoundDrawablesSizes[0].width = typedArray.getDimension(R.styleable.AttributeView_attr_drawable_left_width, 0);
+        compoundDrawablesSizes[0].height = typedArray.getDimension(R.styleable.AttributeView_attr_drawable_left_height, 0);
+        compoundDrawablesSizes[1] = new DrawableSize();
+        compoundDrawablesSizes[1].width = typedArray.getDimension(R.styleable.AttributeView_attr_drawable_top_width, 0);
+        compoundDrawablesSizes[1].height = typedArray.getDimension(R.styleable.AttributeView_attr_drawable_top_height, 0);
+        compoundDrawablesSizes[2] = new DrawableSize();
+        compoundDrawablesSizes[2].width = typedArray.getDimension(R.styleable.AttributeView_attr_drawable_right_width, 0);
+        compoundDrawablesSizes[2].height = typedArray.getDimension(R.styleable.AttributeView_attr_drawable_right_height, 0);
+        compoundDrawablesSizes[3] = new DrawableSize();
+        compoundDrawablesSizes[3].width = typedArray.getDimension(R.styleable.AttributeView_attr_drawable_bottom_width, 0);
+        compoundDrawablesSizes[3].height = typedArray.getDimension(R.styleable.AttributeView_attr_drawable_bottom_height, 0);
+
+        mergeDrawableSize(compoundDrawablesSizes, compoundDrawables);
+        ((TextView) view).setCompoundDrawables(compoundDrawables[0], compoundDrawables[1], compoundDrawables[2], compoundDrawables[3]);
+
         setTint(compoundDrawables, compoundDrawablesColors);
-        return compoundDrawablesColors;
     }
 
-    public static int setImageDrawableTint(TypedArray typedArray, View view) {
-        int imageDrawableColor = 0;
+    private static void mergeDrawableSize(DrawableSize[] drawablesSizes, Drawable[] drawables) {
+        if (drawablesSizes == null || drawables == null) return;
+        if (drawablesSizes.length != drawables.length) return;
+
+        for (int i = 0; i < drawablesSizes.length; i++) {
+            DrawableSize size = drawablesSizes[i];
+            Drawable drawable = drawables[i];
+            if (size == null || drawable == null) continue;
+            size.mergeDrawableSize(drawable);
+        }
+    }
+
+
+    public static void setImageDrawableTint(TypedArray typedArray, View view) {
+        int imageDrawableColor;
         Drawable imageDrawable = null;
         if (view instanceof ImageView) {
             imageDrawable = ((ImageView) view).getDrawable();
         }
-        if (imageDrawable == null) return imageDrawableColor;
+        if (imageDrawable == null) return;
         imageDrawableColor = typedArray.getColor(R.styleable.AttributeView_attr_src_tint, 0);
         setTint(imageDrawable, imageDrawableColor);
-        return imageDrawableColor;
     }
 
     private static void setBackground(Drawable drawable, View view, TypedArray typedArray) {

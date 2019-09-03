@@ -18,8 +18,6 @@ import com.dailyyoga.ui.R;
 public class AttributeImageButton extends AppCompatImageButton {
 
 
-    private int imageDrawableColor;
-
     public AttributeImageButton(Context context) {
         this(context, null);
     }
@@ -32,18 +30,11 @@ public class AttributeImageButton extends AppCompatImageButton {
         super(context, attrs, defStyleAttr);
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.AttributeImageButton);
-        imageDrawableColor = AttributeCompat.setImageDrawableTint(typedArray, this);
+        AttributeCompat.setImageDrawableTint(typedArray, this);
         AttributeCompat.setViewAttribute(typedArray, this);
     }
 
     public void setImageDrawableColor(int imageDrawableColor) {
-        this.imageDrawableColor = imageDrawableColor;
-        AttributeCompat.setTint(getDrawable(), imageDrawableColor);
-    }
-
-    @Override
-    public void setImageDrawable(@Nullable Drawable drawable) {
-        super.setImageDrawable(drawable);
         AttributeCompat.setTint(getDrawable(), imageDrawableColor);
     }
 }

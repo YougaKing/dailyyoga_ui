@@ -17,7 +17,6 @@ import com.dailyyoga.ui.R;
  */
 public class AttributeImageView extends AppCompatImageView {
 
-    private int imageDrawableColor;
 
     public AttributeImageView(Context context) {
         this(context, null);
@@ -31,18 +30,11 @@ public class AttributeImageView extends AppCompatImageView {
         super(context, attrs, defStyleAttr);
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.AttributeImageView);
-        imageDrawableColor = AttributeCompat.setImageDrawableTint(typedArray, this);
+        AttributeCompat.setImageDrawableTint(typedArray, this);
         AttributeCompat.setViewAttribute(typedArray, this);
     }
 
     public void setImageDrawableColor(int imageDrawableColor) {
-        this.imageDrawableColor = imageDrawableColor;
-        AttributeCompat.setTint(getDrawable(), imageDrawableColor);
-    }
-
-    @Override
-    public void setImageDrawable(@Nullable Drawable drawable) {
-        super.setImageDrawable(drawable);
         AttributeCompat.setTint(getDrawable(), imageDrawableColor);
     }
 }

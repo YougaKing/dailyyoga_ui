@@ -59,6 +59,15 @@
     <attr name="attr_drawable_right_tint" format="color" />
     <attr name="attr_drawable_bottom_tint" format="color" />
 
+    <attr name="attr_drawable_top_width" format="dimension" />
+    <attr name="attr_drawable_top_height" format="dimension" />
+    <attr name="attr_drawable_left_width" format="dimension" />
+    <attr name="attr_drawable_left_height" format="dimension" />
+    <attr name="attr_drawable_right_width" format="dimension" />
+    <attr name="attr_drawable_right_height" format="dimension" />
+    <attr name="attr_drawable_bottom_width" format="dimension" />
+    <attr name="attr_drawable_bottom_height" format="dimension" />
+
     <attr name="attr_src_tint" format="color" />
 
     <declare-styleable name="AttributeView">
@@ -99,6 +108,15 @@
         <attr name="attr_drawable_left_tint" />
         <attr name="attr_drawable_right_tint" />
         <attr name="attr_drawable_bottom_tint" />
+
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
 
         <attr name="attr_src_tint" />
     </declare-styleable>
@@ -142,6 +160,15 @@
         <attr name="attr_drawable_right_tint" />
         <attr name="attr_drawable_bottom_tint" />
 
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
+
         <attr name="attr_src_tint" />
     </declare-styleable>
 
@@ -183,6 +210,15 @@
         <attr name="attr_drawable_left_tint" />
         <attr name="attr_drawable_right_tint" />
         <attr name="attr_drawable_bottom_tint" />
+
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
 
         <attr name="attr_src_tint" />
     </declare-styleable>
@@ -226,6 +262,15 @@
         <attr name="attr_drawable_right_tint" />
         <attr name="attr_drawable_bottom_tint" />
 
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
+
         <attr name="attr_src_tint" />
     </declare-styleable>
 
@@ -267,6 +312,15 @@
         <attr name="attr_drawable_left_tint" />
         <attr name="attr_drawable_right_tint" />
         <attr name="attr_drawable_bottom_tint" />
+
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
 
         <attr name="attr_src_tint" />
     </declare-styleable>
@@ -310,6 +364,15 @@
         <attr name="attr_drawable_right_tint" />
         <attr name="attr_drawable_bottom_tint" />
 
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
+
         <attr name="attr_src_tint" />
     </declare-styleable>
 
@@ -351,6 +414,15 @@
         <attr name="attr_drawable_left_tint" />
         <attr name="attr_drawable_right_tint" />
         <attr name="attr_drawable_bottom_tint" />
+
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
 
         <attr name="attr_src_tint" />
     </declare-styleable>
@@ -394,6 +466,15 @@
         <attr name="attr_drawable_right_tint" />
         <attr name="attr_drawable_bottom_tint" />
 
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
+
         <attr name="attr_src_tint" />
     </declare-styleable>
 
@@ -435,6 +516,15 @@
         <attr name="attr_drawable_left_tint" />
         <attr name="attr_drawable_right_tint" />
         <attr name="attr_drawable_bottom_tint" />
+
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
 
         <attr name="attr_src_tint" />
     </declare-styleable>
@@ -478,6 +568,15 @@
         <attr name="attr_drawable_right_tint" />
         <attr name="attr_drawable_bottom_tint" />
 
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
+
         <attr name="attr_src_tint" />
     </declare-styleable>
 
@@ -519,6 +618,15 @@
         <attr name="attr_drawable_left_tint" />
         <attr name="attr_drawable_right_tint" />
         <attr name="attr_drawable_bottom_tint" />
+
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
 
         <attr name="attr_src_tint" />
     </declare-styleable>
@@ -562,6 +670,15 @@
         <attr name="attr_drawable_right_tint" />
         <attr name="attr_drawable_bottom_tint" />
 
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
+
         <attr name="attr_src_tint" />
     </declare-styleable>
 
@@ -603,6 +720,15 @@
         <attr name="attr_drawable_left_tint" />
         <attr name="attr_drawable_right_tint" />
         <attr name="attr_drawable_bottom_tint" />
+
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
 
         <attr name="attr_src_tint" />
     </declare-styleable>
