@@ -16,7 +16,7 @@
 
 ```java
 	dependencies {
-	        implementation 'com.github.YougaKing:dailyyoga_ui:1.0.2'
+	        implementation 'com.github.YougaKing:dailyyoga_ui:1.0.3'
 	}
 ```
 
