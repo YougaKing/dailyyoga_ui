@@ -13,19 +13,19 @@ import com.dailyyoga.ui.R;
  * @created on: 2019/8/19 17:37
  * @description:
  */
-public class AttributeLineLayout extends LinearLayout {
+public class AttributeLinearLayout extends LinearLayout {
 
-    public AttributeLineLayout(Context context) {
+    public AttributeLinearLayout(Context context) {
         this(context, null);
     }
 
-    public AttributeLineLayout(Context context, AttributeSet attrs) {
+    public AttributeLinearLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public AttributeLineLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public AttributeLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.AttributeLineLayout);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.AttributeLinearLayout);
         AttributeCompat.setViewAttribute(typedArray, this);
     }
 }

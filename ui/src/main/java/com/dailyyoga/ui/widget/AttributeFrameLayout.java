@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
 
 import com.dailyyoga.ui.AttributeCompat;
 import com.dailyyoga.ui.R;

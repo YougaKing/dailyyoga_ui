@@ -1,6 +1,6 @@
 # Dailyyoga UI
 
-每日瑜伽 AndroidUI库，国内/海外事业部通用的Ui View，先暂上传至JitPack 
+每日瑜伽 AndroidUI库，国内/海外事业部通用的Ui View
 
 **使用步骤1.** 项目根目录build.gradle
 

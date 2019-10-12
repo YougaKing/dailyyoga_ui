@@ -427,7 +427,58 @@
         <attr name="attr_src_tint" />
     </declare-styleable>
 
-    <declare-styleable name="AttributeLineLayout">
+    <declare-styleable name="AttributeLinearLayout">
+        <attr name="attr_shape" />
+        <attr name="attr_solid_color" />
+
+        <attr name="attr_corners_radius" />
+        <attr name="attr_corners_bottomLeftRadius" />
+        <attr name="attr_corners_bottomRightRadius" />
+        <attr name="attr_corners_topLeftRadius" />
+        <attr name="attr_corners_topRightRadius" />
+
+        <attr name="attr_stroke_width" />
+        <attr name="attr_stroke_color" />
+        <attr name="attr_stroke_dashWidth" />
+        <attr name="attr_stroke_dashGap" />
+        <attr name="attr_stroke_position" />
+
+        <attr name="attr_gradient_angle" />
+        <attr name="attr_gradient_centerX" />
+        <attr name="attr_gradient_centerY" />
+        <attr name="attr_gradient_centerColor" />
+        <attr name="attr_gradient_endColor" />
+        <attr name="attr_gradient_startColor" />
+        <attr name="attr_gradient_gradientRadius" />
+        <attr name="attr_gradient_type" />
+        <attr name="attr_gradient_useLevel" />
+
+        <attr name="attr_padding_left" />
+        <attr name="attr_padding_top" />
+        <attr name="attr_padding_right" />
+        <attr name="attr_padding_bottom" />
+
+        <attr name="attr_size_width" />
+        <attr name="attr_size_height" />
+
+        <attr name="attr_drawable_top_tint" />
+        <attr name="attr_drawable_left_tint" />
+        <attr name="attr_drawable_right_tint" />
+        <attr name="attr_drawable_bottom_tint" />
+
+        <attr name="attr_drawable_top_width" />
+        <attr name="attr_drawable_top_height" />
+        <attr name="attr_drawable_left_width" />
+        <attr name="attr_drawable_left_height" />
+        <attr name="attr_drawable_right_width" />
+        <attr name="attr_drawable_right_height" />
+        <attr name="attr_drawable_bottom_width" />
+        <attr name="attr_drawable_bottom_height" />
+
+        <attr name="attr_src_tint" />
+    </declare-styleable>
+
+    <declare-styleable name="AttributeRadioGroup">
         <attr name="attr_shape" />
         <attr name="attr_solid_color" />
 
