@@ -6,14 +6,18 @@ import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
 import com.dailyyoga.ui.AttributeCompat;
+import com.dailyyoga.ui.IViewDrawableCreator;
 import com.dailyyoga.ui.R;
+import com.dailyyoga.ui.drawable.GradientDrawableCreator;
 
 /**
  * @author: YougaKingWu@gmail.com
  * @created on: 2019/8/19 17:37
  * @description:
  */
-public class AttributeFrameLayout extends FrameLayout {
+public class AttributeFrameLayout extends FrameLayout implements IViewDrawableCreator {
+
+    private GradientDrawableCreator mDrawableCreator;
 
     public AttributeFrameLayout(Context context) {
         this(context, null);
@@ -27,5 +31,15 @@ public class AttributeFrameLayout extends FrameLayout {
         super(context, attrs, defStyleAttr);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.AttributeFrameLayout);
         AttributeCompat.setViewAttribute(typedArray, this);
+    }
+
+    @Override
+    public void setDrawableCreator(GradientDrawableCreator drawableCreator) {
+        mDrawableCreator = drawableCreator;
+    }
+
+    @Override
+    public GradientDrawableCreator getDrawableCreator() {
+        return mDrawableCreator;
     }
 }

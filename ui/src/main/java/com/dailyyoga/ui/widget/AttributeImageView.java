@@ -8,15 +8,18 @@ import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 
 import com.dailyyoga.ui.AttributeCompat;
+import com.dailyyoga.ui.IViewDrawableCreator;
 import com.dailyyoga.ui.R;
+import com.dailyyoga.ui.drawable.GradientDrawableCreator;
 
 /**
  * @author: YougaKingWu@gmail.com
  * @created on: 2019/8/30 9:04
  * @description:
  */
-public class AttributeImageView extends AppCompatImageView {
+public class AttributeImageView extends AppCompatImageView implements IViewDrawableCreator {
 
+    private GradientDrawableCreator mDrawableCreator;
 
     public AttributeImageView(Context context) {
         this(context, null);
@@ -36,5 +39,15 @@ public class AttributeImageView extends AppCompatImageView {
 
     public void setImageDrawableColor(int imageDrawableColor) {
         AttributeCompat.setTint(getDrawable(), imageDrawableColor);
+    }
+
+    @Override
+    public void setDrawableCreator(GradientDrawableCreator drawableCreator) {
+        mDrawableCreator = drawableCreator;
+    }
+
+    @Override
+    public GradientDrawableCreator getDrawableCreator() {
+        return mDrawableCreator;
     }
 }

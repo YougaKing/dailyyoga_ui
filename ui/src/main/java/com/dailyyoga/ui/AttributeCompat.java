@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.dailyyoga.ui.drawable.DrawableFactory;
 import com.dailyyoga.ui.drawable.DrawableSize;
+import com.dailyyoga.ui.drawable.GradientDrawableCreator;
 
 /**
  * @author: YougaKingWu@gmail.com
@@ -25,8 +26,11 @@ public class AttributeCompat {
             if (typedArray.getIndexCount() == 0) {
                 return view;
             }
-            Drawable drawable = DrawableFactory.getDrawable(typedArray);
-            setBackground(drawable, view, typedArray);
+            GradientDrawableCreator drawableCreator = DrawableFactory.getDrawable(typedArray);
+            if (view instanceof IViewDrawableCreator) {
+                ((IViewDrawableCreator) view).setDrawableCreator(drawableCreator);
+            }
+            setBackground(drawableCreator.create(), view, typedArray);
 
             return view;
         } catch (Exception e) {

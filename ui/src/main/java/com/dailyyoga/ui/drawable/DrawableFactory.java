@@ -1,7 +1,6 @@
 package com.dailyyoga.ui.drawable;
 
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
 
 /**
  * @author: YougaKingWu@gmail.com
@@ -11,7 +10,7 @@ import android.graphics.drawable.Drawable;
 public class DrawableFactory {
 
     //获取shape属性的drawable
-    public static Drawable getDrawable(TypedArray typedArray) {
-        return new GradientDrawableCreator(typedArray).create();
+    public static GradientDrawableCreator getDrawable(TypedArray typedArray) {
+        return new GradientDrawableCreator(typedArray);
     }
 }

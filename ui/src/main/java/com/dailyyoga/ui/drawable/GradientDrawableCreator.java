@@ -265,6 +265,10 @@ public class GradientDrawableCreator implements ICreateDrawable {
         return listDrawable;
     }
 
+    public float getCornersRadius() {
+        return cornersRadius;
+    }
+
     private boolean isStateful() {
         if (solidColor == null && strokeColor == null) return false;
 

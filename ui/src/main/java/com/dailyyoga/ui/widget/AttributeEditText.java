@@ -6,15 +6,19 @@ import android.support.v7.widget.AppCompatEditText;
 import android.util.AttributeSet;
 
 import com.dailyyoga.ui.AttributeCompat;
+import com.dailyyoga.ui.IViewDrawableCreator;
 import com.dailyyoga.ui.R;
 import com.dailyyoga.ui.drawable.DrawableSize;
+import com.dailyyoga.ui.drawable.GradientDrawableCreator;
 
 /**
  * @author: YougaKingWu@gmail.com
  * @created on: 2019/8/19 17:37
  * @description:
  */
-public class AttributeEditText extends AppCompatEditText {
+public class AttributeEditText extends AppCompatEditText implements IViewDrawableCreator {
+
+    private GradientDrawableCreator mDrawableCreator;
 
     public AttributeEditText(Context context) {
         this(context, null);
@@ -62,4 +66,13 @@ public class AttributeEditText extends AppCompatEditText {
         setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], getCompoundDrawables()[2], getCompoundDrawables()[3]);
     }
 
+    @Override
+    public void setDrawableCreator(GradientDrawableCreator drawableCreator) {
+        mDrawableCreator = drawableCreator;
+    }
+
+    @Override
+    public GradientDrawableCreator getDrawableCreator() {
+        return mDrawableCreator;
+    }
 }

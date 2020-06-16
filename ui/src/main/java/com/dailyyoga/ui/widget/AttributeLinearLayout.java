@@ -6,14 +6,18 @@ import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
 import com.dailyyoga.ui.AttributeCompat;
+import com.dailyyoga.ui.IViewDrawableCreator;
 import com.dailyyoga.ui.R;
+import com.dailyyoga.ui.drawable.GradientDrawableCreator;
 
 /**
  * @author: YougaKingWu@gmail.com
  * @created on: 2019/8/19 17:37
  * @description:
  */
-public class AttributeLinearLayout extends LinearLayout {
+public class AttributeLinearLayout extends LinearLayout implements IViewDrawableCreator {
+
+    private GradientDrawableCreator mDrawableCreator;
 
     public AttributeLinearLayout(Context context) {
         this(context, null);
@@ -27,5 +31,15 @@ public class AttributeLinearLayout extends LinearLayout {
         super(context, attrs, defStyleAttr);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.AttributeLinearLayout);
         AttributeCompat.setViewAttribute(typedArray, this);
+    }
+
+    @Override
+    public void setDrawableCreator(GradientDrawableCreator drawableCreator) {
+        mDrawableCreator = drawableCreator;
+    }
+
+    @Override
+    public GradientDrawableCreator getDrawableCreator() {
+        return mDrawableCreator;
     }
 }

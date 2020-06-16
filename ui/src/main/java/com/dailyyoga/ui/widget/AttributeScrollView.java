@@ -6,14 +6,18 @@ import android.util.AttributeSet;
 import android.widget.ScrollView;
 
 import com.dailyyoga.ui.AttributeCompat;
+import com.dailyyoga.ui.IViewDrawableCreator;
 import com.dailyyoga.ui.R;
+import com.dailyyoga.ui.drawable.GradientDrawableCreator;
 
 /**
  * @author: YougaKingWu@gmail.com
  * @created on: 2019/8/19 17:37
  * @description:
  */
-public class AttributeScrollView extends ScrollView {
+public class AttributeScrollView extends ScrollView implements IViewDrawableCreator {
+
+    private GradientDrawableCreator mDrawableCreator;
 
     public AttributeScrollView(Context context) {
         this(context, null);
@@ -27,5 +31,15 @@ public class AttributeScrollView extends ScrollView {
         super(context, attrs, defStyleAttr);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.AttributeScrollView);
         AttributeCompat.setViewAttribute(typedArray, this);
+    }
+
+    @Override
+    public void setDrawableCreator(GradientDrawableCreator drawableCreator) {
+        mDrawableCreator = drawableCreator;
+    }
+
+    @Override
+    public GradientDrawableCreator getDrawableCreator() {
+        return mDrawableCreator;
     }
 }
